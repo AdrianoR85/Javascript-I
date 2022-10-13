@@ -15,5 +15,5 @@ while(moreCity.trim() === "sim") {
 alert(`
     Turista: ${name}
     Total de cidades visitadas: ${totalCity}
-    cidades:\n ${cities}
+    cidades visitadas:\n ${cities}
 `)
