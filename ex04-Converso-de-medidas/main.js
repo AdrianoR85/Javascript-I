@@ -8,7 +8,7 @@ const measureOfType = Number(prompt(
     5 - hectômetro (hm)
     6 - quilômetro (km)
  `));
- let result = 0
+ let result;
  let message = ""
 
  switch(measureOfType){
