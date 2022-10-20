@@ -6,41 +6,10 @@ let side;
 let radius;
 
 do {
-    
     let option = showMenu()
-    switch(option) {
-        case "1":
-            base = parseFloat(prompt("Informe o valor da base"))
-            height = parseFloat(prompt("Informe o valor da altura"))
-            alert("A área do triangulo é " + areaOfTriangle(base, height))
-            break
-        case "2":
-            base = parseFloat(prompt("Informe o valor da base"))
-            height = parseFloat(prompt("Informe o valor da altura"))
-            alert("A área do retangulo é " + areaOfRectangle(base, height))
-            break
-        case "3":
-            side = parseFloat(prompt("Informe o valor dos lados"))
-            alert("A área do quadrado é " + areaOfSquare(side))
-            break
-        case "4":
-            base = parseFloat(prompt("Informe o valor da base maior"))
-            base2 = parseFloat(prompt("Informe o valor da base menor"))
-            height = parseFloat(prompt("Informe o valor da altura"))
-            alert("A área do trapézio é " + areaOfTrapezoid(base, base2, height))
-            break
-        case "5":
-            radius = parseFloat(prompt("Informe o valor do raio"))
-            alert("A área do circulo é " + areaOfCircle(radius))
-            break
-        case "6":
-            alert('Saindo...')
-            break
-        default:
-            alert("Opção inválida")
-            break
-    }
+    calculator(option)
 } while(option !== "6")
+
 
 function showMenu() {
     option = prompt(
@@ -74,5 +43,40 @@ function areaOfTrapezoid(base1, base2, height) {
 
 function areaOfCircle(radius) {
     return Math.PI * (radius**2)
+}
+
+function calculator(option) {
+    switch(option) {
+        case "1":
+            base = parseFloat(prompt("Informe o valor da base"))
+            height = parseFloat(prompt("Informe o valor da altura"))
+            alert("A área do triangulo é " + areaOfTriangle(base, height))
+            break
+        case "2":
+            base = parseFloat(prompt("Informe o valor da base"))
+            height = parseFloat(prompt("Informe o valor da altura"))
+            alert("A área do retangulo é " + areaOfRectangle(base, height))
+            break
+        case "3":
+            side = parseFloat(prompt("Informe o valor dos lados"))
+            alert("A área do quadrado é " + areaOfSquare(side))
+            break
+        case "4":
+            base = parseFloat(prompt("Informe o valor da base maior"))
+            base2 = parseFloat(prompt("Informe o valor da base menor"))
+            height = parseFloat(prompt("Informe o valor da altura"))
+            alert("A área do trapézio é " + areaOfTrapezoid(base, base2, height))
+            break
+        case "5":
+            radius = parseFloat(prompt("Informe o valor do raio"))
+            alert("A área do circulo é " + areaOfCircle(radius))
+            break
+        case "6":
+            alert('Finalizando...')
+            break
+        default:
+            alert("Opção inválida")
+            break
+    }
 }
 
