@@ -32,15 +32,16 @@ do {
             }
             break
         case "2":
-            let showProperties = ""
-            for(let i = 0; i < properties.length; i++) {
-                showProperties +=
-                "\nProprietário: " + properties[i].name +
-                "\nQuartos: " + properties[i].room +
-                "\nBanheiros: " + properties[i].bath +
-                "\nPossui garagem? " + properties[i].garage + "\n"
-            }
-            alert("Propriedades:\n" + showProperties)
+            listProperties()
+            // let showProperties = ""
+            // for(let i = 0; i < properties.length; i++) {
+            //     showProperties +=
+            //     "\nProprietário: " + properties[i].name +
+            //     "\nQuartos: " + properties[i].room +
+            //     "\nBanheiros: " + properties[i].bath +
+            //     "\nPossui garagem? " + properties[i].garage + "\n"
+            // }
+            // alert("Propriedades:\n" + showProperties)
             break
         case "3":
             alert('Saindo...')
@@ -50,3 +51,15 @@ do {
             break
     }
 } while(option !== "3")
+
+function listProperties() {
+    const showProperties = properties.reduce((textStart, propertie, indice) => {
+        textStart += "Propriedade: " +  propertie.name 
+        textStart += "\nQuartos: " +  propertie.room 
+        textStart += "\nBanheiros: " +  propertie.bath 
+        textStart += "\nGaragem: " +  propertie.garage + "\n"
+        return textStart
+    }, "")
+
+    alert(showProperties)
+}
